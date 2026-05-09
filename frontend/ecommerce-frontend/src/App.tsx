@@ -7,6 +7,7 @@ import { Footer } from '@/components/layout/Footer';
 import { CartDrawer } from '@/components/cart/CartDrawer';
 import { HomePage } from '@/pages/HomePage';
 import { StorePage } from '@/pages/StorePage';
+import { ProductPage } from '@/pages/ProductPage';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -23,6 +24,7 @@ function AppLayout() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path='/store' element={<StorePage />} />
+          <Route path='/product/:slug' element={<ProductPage />} />
         </Routes>
       </main>
       <Footer />
