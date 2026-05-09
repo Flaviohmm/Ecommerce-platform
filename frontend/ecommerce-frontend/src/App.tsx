@@ -6,6 +6,7 @@ import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
 import { CartDrawer } from '@/components/cart/CartDrawer';
 import { HomePage } from '@/pages/HomePage';
+import { StorePage } from '@/pages/StorePage';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -21,6 +22,7 @@ function AppLayout() {
       <main className="flex-1 pt-16">
         <Routes>
           <Route path="/" element={<HomePage />} />
+          <Route path='/store' element={<StorePage />} />
         </Routes>
       </main>
       <Footer />
